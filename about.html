@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테크케이 | COMPANY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 폰트 및 커스텀 스타일 */
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700;900&display=swap');
+        body { font-family: 'Pretendard', sans-serif; background-color: #050a14; color: #ffffff; margin: 0; }
+        
+        /* 히어로 섹션 배경 이미지 (소개서 느낌의 테크 이미지) */
+        .hero-section {
+            background: linear-gradient(to bottom, rgba(5, 10, 20, 0.7), #050a14), 
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+        }
+
+        /* 카드 스타일 */
+        .tech-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .tech-card:hover {
+            border-color: #06b6d4; /* 사이언 컬러 */
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+<div id="mouse-glow" class="fixed w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <nav class="fixed w-full z-50 flex justify-between items-center px-10 py-6 bg-black/50 backdrop-blur-lg">
+        <div class="text-2xl font-black tracking-tighter text-cyan-500">TECH K</div>
+        <div class="space-x-8 font-bold text-sm">
+            <a href="index.html" class="hover:text-cyan-400">HOME</a>
+            <a href="about.html" class="text-cyan-400">COMPANY</a>
+            <a href="business.html" class="hover:text-cyan-400">BUSINESS</a>
+            <a href="contact.html" class="hover:text-cyan-400">CONTACT</a>
+        </div>
+    </nav>
+
+    <header class="hero-section flex items-center justify-center pt-20">
+        <div class="text-center">
+            <p class="text-cyan-400 font-bold tracking-[0.5em] mb-4">FUTURE-ORIENTED</p>
+            <h1 class="text-6xl font-black uppercase">Company Overview</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-20">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-8 border-l-8 border-cyan-500 pl-6">인간 중심의 기술 혁신,<br>그 중심에 <span class="text-cyan-400">테크케이</span>가 있습니다.</h2>
+                <p class="text-gray-400 leading-relaxed text-lg mb-8">
+                    (주)테크케이는 2015년 설립된 AI 솔루션 및 실감형 콘텐츠 전문 기업입니다. 
+                    단순한 기술 개발을 넘어, 창의적인 아이디어와 열정적인 포부로 
+                    미래 산업의 신뢰받는 파트너가 되고자 합니다.
+                </p>
+                
+                <div class="space-y-4">
+                    <div class="flex border-b border-white/10 py-3">
+                        <span class="w-32 text-cyan-500 font-bold">대표이사</span>
+                        <span>박혜경</span>
+                    </div>
+                    <div class="flex border-b border-white/10 py-3">
+                        <span class="w-32 text-cyan-500 font-bold">설립일</span>
+                        <span>2015년 10월</span>
+                    </div>
+                    <div class="flex border-b border-white/10 py-3">
+                        <span class="w-32 text-cyan-500 font-bold">사업분야</span>
+                        <span>AI 솔루션, XR 실감체험, 모바일 게임</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div class="tech-card p-8 rounded-2xl text-center">
+                    <div class="text-4xl mb-4">🧠</div>
+                    <h3 class="font-bold mb-2">AI Innovation</h3>
+                    <p class="text-xs text-gray-500">멀티모달 통합 분석</p>
+                </div>
+                <div class="tech-card p-8 rounded-2xl text-center">
+                    <div class="text-4xl mb-4">🕶️</div>
+                    <h3 class="font-bold mb-2">XR Content</h3>
+                    <p class="text-xs text-gray-500">몰입형 실감 체험</p>
+                </div>
+                <div class="tech-card p-8 rounded-2xl text-center">
+                    <div class="text-4xl mb-4">🎮</div>
+                    <h3 class="font-bold mb-2">Mobile Game</h3>
+                    <p class="text-xs text-gray-500">독창적인 게임 개발</p>
+                </div>
+                <div class="tech-card p-8 rounded-2xl text-center">
+                    <div class="text-4xl mb-4">🌐</div>
+                    <h3 class="font-bold mb-2">Web/App</h3>
+                    <p class="text-xs text-gray-500">AI 연동 플랫폼</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black py-10 text-center border-t border-white/5 text-gray-600 text-sm">
+        <p>© 2026 Tech K Co., Ltd. All Rights Reserved.</p>
+    </footer>
+
+<style>
+    .star {
+        position: fixed;
+        background-color: #fff;
+        border-radius: 50%;
+        opacity: 0;
+        pointer-events: none;
+        animation: fadeOutStar 1.5s forwards;
+        z-index: 9998; /* 커서보다 살짝 아래, 배경 광원보다 위 */
+    }
+
+    @keyframes fadeOutStar {
+        0% { transform: scale(0) translateY(0px); opacity: 1; }
+        50% { transform: scale(1) translateY(-10px); opacity: 0.8; }
+        100% { transform: scale(0.5) translateY(-30px); opacity: 0; }
+    }
+</style>
+
+<script>
+    document.addEventListener('mousemove', function(e) {
+        const createStar = () => {
+            const star = document.createElement('div');
+            star.className = 'star';
+            document.body.appendChild(star);
+
+            const size = Math.random() * 3 + 1; // 1px to 4px
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${e.clientX + (Math.random() * 20 - 10)}px`; // 마우스 근처에 랜덤하게
+            star.style.top = `${e.clientY + (Math.random() * 20 - 10)}px`; // 마우스 근처에 랜덤하게
+
+            // 랜덤한 색상 (사이언 계열)
+            const hue = Math.floor(Math.random() * 30) + 180; // 180-210 (파랑-청록)
+            const saturation = Math.floor(Math.random() * 30) + 70; // 70-100%
+            const lightness = Math.floor(Math.random() * 20) + 80; // 80-100%
+            star.style.backgroundColor = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+
+            star.addEventListener('animationend', () => {
+                star.remove();
+            });
+        };
+
+        // 마우스 움직임 횟수를 제한하여 별이 너무 많이 생성되지 않도록 함
+        if (Math.random() < 0.3) { // 30% 확률로 별 생성
+            createStar();
+        }
+    });
+</script>
+
+
+</body>
+</html>
